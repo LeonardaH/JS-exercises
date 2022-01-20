@@ -725,7 +725,7 @@ h2 {
 }
 
 .section-holder .category-grid .category-content .learn-more:hover {
-  background-color: #FED964;
+  background-color: #3aa0df;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1342,7 +1342,8 @@ footer .bottom-footer-content-2 {
 }
 
 .contact .contact-content .contact-info .contact-us {
-  padding: 12px 20px;
+  padding: 12px 0;
+  width: 160px;
   border-radius: 5px;
   background: #316b90;
   font-size: 16px;
@@ -1357,7 +1358,8 @@ footer .bottom-footer-content-2 {
 
 @media only screen and (max-width: 480px) {
   .contact .contact-content .contact-info .contact-us {
-    font-size: 14px;
+    font-size: 15px;
+    width: 146px;
     margin-top: 15px;
   }
 }
@@ -1474,7 +1476,7 @@ footer .bottom-footer-content-2 {
 
 @media only screen and (max-width: 900px) {
   .about-us .anja-images .image {
-    padding-bottom: 136%;
+    padding-bottom: 107%;
   }
 }
 
