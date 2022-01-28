@@ -882,7 +882,7 @@ footer{
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 text-align: center;
                 @media only screen and (max-width: 480px){
-                    font-size: 26px;
+                    font-size: 24px;
                 }
             }
             p{
@@ -940,6 +940,9 @@ footer{
 //contact-page
 
 .contact{
+    @media only screen and (max-width: 768px){
+        padding-top: 60px;
+    }
     h3{
         color: #3596d3;
         font-size: 32px;
@@ -950,10 +953,6 @@ footer{
         }
     }
     .contact-content{
-        margin-top: 30px;
-        @media only screen and (max-width: 900px){
-         margin-top: 60px;
-        }
         .anja-contact{
             width: 160px;
             height: 160px;
@@ -983,7 +982,7 @@ footer{
                 max-width: 320px;
                 margin: auto;
                 margin-top: -20px;
-                padding-bottom: 15px;
+                padding-bottom: 20px;
             }
             p{
                 color:#555;
@@ -991,6 +990,9 @@ footer{
                 text-align: center;
                 &:first-child{
                     padding-top: 44px;
+                }
+                @media only screen and (max-width: 480px){
+                    font-size: 15px;
                 }
             }
             .contact-us{
@@ -1008,17 +1010,14 @@ footer{
                 @media only screen and (max-width: 480px){
                     font-size: 15px;
                     width: 146px;
-                    margin-top: 15px;
+                    margin-top: 20px;
                 }
             }
         }
     } 
 }
 .map-container{
-    margin-top: 78px;
-    @media only screen and (max-width: 768px){
-        margin-top: 60px;
-    }
+    margin-top: 55px;
 }
 
 //animated menu 
@@ -1075,10 +1074,10 @@ footer{
         background-size: 25px;
         background-repeat: no-repeat;
         background-position: center;
-        bottom: 20px;
-        right: 20px;
+        bottom: 5px;
+        right: 14px;
         border-radius: 50%;
-        z-index: 3;
+        z-index: 10;
     }
 }
 
@@ -1090,7 +1089,6 @@ footer{
         grid-gap: 40px!important;
     }
     @media only screen and (max-width: 480px){
-        padding-top: 20px!important;
         grid-gap: 30px!important;
     }  
     .anja-images{
@@ -1129,7 +1127,7 @@ footer{
                 @media only screen and (max-width: 480px){
                     background-size: 80%;
                     background-position: center bottom;
-                    margin-top: 40px;
+                    margin-top: 0!important;
                 } 
             }
         }
@@ -1138,7 +1136,7 @@ footer{
         p{
             line-height: 1.5;
             @media only screen and (max-width: 480px){
-                font-size: 14px;
+                font-size: 15px;
             }
         }
         &.anja{
@@ -1150,7 +1148,7 @@ footer{
             padding-bottom: 20px;
             text-align: center;
             @media only screen and (max-width: 480px){
-                font-size: 26px;
+                font-size: 24px;
             }
         }
     }

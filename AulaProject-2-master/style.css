@@ -1198,7 +1198,7 @@ footer .bottom-footer-content-2 {
 
 @media only screen and (max-width: 480px) {
   .categories .category-container .category-text-container h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -1266,6 +1266,12 @@ footer .bottom-footer-content-2 {
   background-image: url(images/edukacija-za-pomocnike-big.svg);
 }
 
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding-top: 60px;
+  }
+}
+
 .contact h3 {
   color: #3596d3;
   font-size: 32px;
@@ -1276,16 +1282,6 @@ footer .bottom-footer-content-2 {
 @media only screen and (max-width: 768px) {
   .contact h3 {
     font-size: 24px;
-  }
-}
-
-.contact .contact-content {
-  margin-top: 30px;
-}
-
-@media only screen and (max-width: 900px) {
-  .contact .contact-content {
-    margin-top: 60px;
   }
 }
 
@@ -1327,7 +1323,7 @@ footer .bottom-footer-content-2 {
     max-width: 320px;
     margin: auto;
     margin-top: -20px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
 }
 
@@ -1339,6 +1335,12 @@ footer .bottom-footer-content-2 {
 
 .contact .contact-content .contact-info p:first-child {
   padding-top: 44px;
+}
+
+@media only screen and (max-width: 480px) {
+  .contact .contact-content .contact-info p {
+    font-size: 15px;
+  }
 }
 
 .contact .contact-content .contact-info .contact-us {
@@ -1360,18 +1362,12 @@ footer .bottom-footer-content-2 {
   .contact .contact-content .contact-info .contact-us {
     font-size: 15px;
     width: 146px;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }
 
 .map-container {
-  margin-top: 78px;
-}
-
-@media only screen and (max-width: 768px) {
-  .map-container {
-    margin-top: 60px;
-  }
+  margin-top: 55px;
 }
 
 .line {
@@ -1426,10 +1422,10 @@ footer .bottom-footer-content-2 {
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
-    bottom: 20px;
-    right: 20px;
+    bottom: 5px;
+    right: 14px;
     border-radius: 50%;
-    z-index: 3;
+    z-index: 10;
   }
 }
 
@@ -1442,7 +1438,6 @@ footer .bottom-footer-content-2 {
 
 @media only screen and (max-width: 480px) {
   .about-us {
-    padding-top: 20px !important;
     grid-gap: 30px !important;
   }
 }
@@ -1510,7 +1505,7 @@ footer .bottom-footer-content-2 {
   .about-us .anja-images .image.bottom {
     background-size: 80%;
     background-position: center bottom;
-    margin-top: 40px;
+    margin-top: 0 !important;
   }
 }
 
@@ -1520,7 +1515,7 @@ footer .bottom-footer-content-2 {
 
 @media only screen and (max-width: 480px) {
   .about-us .about-us-text p {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -1539,7 +1534,7 @@ footer .bottom-footer-content-2 {
 
 @media only screen and (max-width: 480px) {
   .about-us .about-us-text h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
