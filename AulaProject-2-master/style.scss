@@ -747,6 +747,7 @@ footer{
             background-size: auto 60%;
             background-repeat: no-repeat;
             background-position: center;
+            cursor: pointer;
             @media only screen and (max-width: 768px){
                 background-size: 30% auto;     
                 border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);

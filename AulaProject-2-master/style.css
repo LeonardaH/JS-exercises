@@ -996,6 +996,7 @@ footer .footer-content .center-footer-content {
   background-size: auto 60%;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
