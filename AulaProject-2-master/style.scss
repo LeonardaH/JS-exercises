@@ -55,13 +55,12 @@ header{
     transition: 0.3s;
     nav{
         width:100%;
-        max-width: 1400px;
+        max-width: 1440px;
         padding: 0 30px;
         margin: auto;
         height: 60px;
         @media only screen and (max-width: 768px){
             grid-template-columns: auto 50px;
-            padding: 0;
         }
         .nav-container{
             display: flex;
@@ -69,7 +68,6 @@ header{
             height: 60px;
             @media only screen and (max-width: 768px){
                 grid-template-columns: 50px;
-                padding-left: 20px;
             }
             .logo{
                 position: relative;
@@ -120,7 +118,7 @@ header{
                     }
                     a{
                         color: white;
-                        padding: 0 15px;
+                        padding: 0 24px;
                         width: 100%;
                         height: inherit;
                         border-bottom: 2px solid transparent;
@@ -182,7 +180,7 @@ header{
                     height: 0;
                 }
                 li{
-                    padding: 10px;
+                    padding: 10px 0;
                     &:hover{
                         background: rgba($color: #000000, $alpha: 0.2);
                         color: white;
@@ -209,29 +207,7 @@ header{
                 display: block;
             }   
         }
-        //social media icons
-        .social-media{
-            display: flex;
-            @media only screen and (max-width: 768px){
-                display: none;      
-            }
-            .facebook, .instagram{
-                background-image: url(images/facebook.svg);
-                background-size: 30px;
-                background-repeat: no-repeat;
-                background-position: center;
-                opacity: 0.7;
-                transition: 0.2s;
-                width: 50px;
-                height: 60px;
-                &:hover{
-                    opacity: 1;
-                }
-            }
-            .instagram{
-                background-image: url(images/instagram.svg);
-            }
-        }
+    }
         //hamburger - mobile version
         .hamburger{
             display: none;
@@ -243,10 +219,10 @@ header{
             }
             svg{
                 margin-top: 10px;
+                margin-right: -10px;
             }
         }
     }    
-}
 // header - mobile version
 
 .expand{
@@ -288,18 +264,18 @@ header{
         }
     }
 }
-
+// header color change to blue
 header{
     &.blue, &.blue-home{
-        background-color: hsl(203, 72%, 55%);
+        background-color: #3aa0df;
         nav{
             .nav-container{
                 li{
                     &:hover{
-                        background-color: hsl(203, 72%, 45%);
+                        background-color: #2086c5;
                     }
                     .drop-down{
-                        background-color: hsl(203, 72%, 55%);;
+                        background-color: #3aa0df;;
                     }
                 }
             }
@@ -318,6 +294,11 @@ header{
 
 // home page
 
+h1{
+    line-height: 42px;
+    font-weight: 500;
+}
+
 .content{
     height: 100%;
     width: 100%;
@@ -326,7 +307,7 @@ header{
     transition: 0.5s;
     .content-holder{
         width: 100%;
-        max-width: 1400px;
+        max-width: 1440px;
         overflow: hidden;
     }
     .main-content{
@@ -345,9 +326,8 @@ header{
         }
         .main-content-container{
             height: 100%;
-            max-width: 1400px;
+            max-width: 1440px;
             width: 100%;
-            padding: 0 30px;
             left: 50%;
             transform: translateX(-50%);
             position: absolute;
@@ -358,55 +338,66 @@ header{
             transition: 0.3s;
             @media only screen and (max-width: 768px){
                 background-size: auto 60%;          
-                background-position: center center;
+                background-position: top 20px center;
                 transition: 0.3s;
                 width: 100%;        
             }
-            @media only screen and (max-width: 480x){
-                padding: 0 25px;    
+            @media only screen and (max-width: 480px){
+                background-size: auto 52%; 
+                background-position: top 32px center;
             }
             .main-message{
-                margin-left: 112px;
+                margin-left: 116px;
                 position: absolute;
                 top: 50%;
                 width: 500px;
                 transform: translateY(-50%);
                 @media only screen and (max-width: 1200px){
                     width: 100%;
-                    background-color: rgba($color: #000000, $alpha: .25);
+                    background-color: rgba($color: #000000, $alpha: .2);
                     left: -112px;
                     padding: 50px;                    
                 }
                 @media only screen and (max-width: 768px){
-                    padding: 40px;
-                    width: 100%;
-                    margin-top: 40px;
+                    background-color: transparent;
+                    top: 78%;
                 }
-                h2{
+                @media only screen and (max-width: 480px){
+                    top: 74%;
+                }
+                h1{
+                    color: white;
+                    font-size: 46px;
+                    font-weight: 600;
                     @media only screen and (max-width: 1200px){
                         text-align: center;                     
                     }
+                    @media only screen and (max-width: 768px){
+                        font-size: 40px;                   
+                    }
                     @media only screen and (max-width: 480px){
-                        font-size: 28px;
+                        font-size: 30px;
                     }
                 }
                 p{
                     font-weight: 400px;
                     color: white;
-                    padding-top: 10px;
-                    font-size: 18px;
+                    padding-top: 20px;
+                    line-height: 26px;
+                    font-size: 20px;
                     @media only screen and (max-width: 1200px){
                         text-align: center;                     
                     }
                     @media only screen and (max-width: 480px){
                         font-size: 14px;
+                        padding-top: 8px;
                     }
                 }
                 //CTA buttons - main message
                 .button-holder{
                     width: 100%;
                     margin-top: 40px;
-                    float: left;
+                    display: flex;
                     @media only screen and (max-width: 1200px){
                         display: flex;     
                         justify-content: center;               
@@ -414,27 +405,29 @@ header{
                     @media only screen and (max-width: 480px){
                         flex-direction: column;
                         align-items: center;
-                        margin-top: 30px;
+                        margin-top: 20px;
                     }
                     a{
-                        padding: 12px;
-                        border-radius: 5px;
+                        border-radius: 8px;
                         background: white;
+                        font-weight: 600;
                         font-size: 16px;
-                        color: #000;
+                        color: #282828;
                         display: block;
                         width: 180px;
-                        text-align: center;
+                        height: 56px;
                         transition: 0.2s;
                         border: 1px solid #fff;
-                        float: left;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         &:hover{
                             box-shadow: 0 3px 3px rgba(0,0,0,0.2);
                         }
                         @media only screen and (max-width: 480px){
                             font-size: 14px;
                             width: 140px; 
-                            padding: 9px;      
+                            height: 44px;  
                         }
                         @media only screen and (max-width: 320px){
                             font-size: 12px;
@@ -442,9 +435,17 @@ header{
                         }
                     }
                     .darken{
-                        color: white;
-                        background:#d19005;
+                        color: #1d1d1d;
+                        border: 2px solid white;
                         margin-left: 24px;
+                        background: transparent;
+                        &:hover{
+                            background-color: #C79000;
+                            color: white;
+                            border: none;
+                            font-weight: 500;
+                            box-shadow: none;
+                        }
                         @media only screen and (max-width: 480px){
                             margin-left: 0;
                             margin-top: 10px;
@@ -469,7 +470,7 @@ h2{
     margin: auto;
     .category-grid{
         width: 100%;
-        max-width: 1400px;
+        max-width: 1440px;
         margin: auto;
         margin-top: 60px;
         display: grid;
@@ -482,10 +483,9 @@ h2{
         }
         @media only screen and (max-width: 768px){
             grid-template-columns: 1fr;
-            grid-gap: 60px;
         }
-        @media only screen and (max-width: 768px){
-            padding: 0 25px;
+        @media only screen and (max-width: 480px){
+            grid-gap: 40px;
         }
         .category-content{
             width: 100%;
@@ -496,20 +496,30 @@ h2{
             h2{
                 font-size: 18px;
                 font-weight: 600;
-                padding: 30px 0 10px 0;
-                color: #000;
+                padding-top: 28px;
+                color: #212121;
+                line-height: 42px;
                 @media only screen and (max-width: 768px){
-                    font-size: 20px;
+                    font-size: 28px;
+                    padding-top: 24px;
                 }
                 @media only screen and (max-width: 480px){
-                    font-size: 16px;
+                    font-size: 18px;
                     padding-top: 14px;
                 }
             }
             p{
-                color: #000;
+                color: #272727;
+                padding-top: 16px;
+                line-height: 22px;
+                @media only screen and (max-width: 768px){
+                    width: 80%;
+                    margin: auto;
+                }
                 @media only screen and (max-width: 480px){
                     font-size: 14px;
+                    width: 100%;
+                    padding-top: 0;
                 }
             }
             .image{
@@ -521,6 +531,15 @@ h2{
                 background-size: 100%;
                 &:hover{
                     background-size: 110%;
+                }
+                @media only screen and (max-width: 768px){
+                    padding-bottom: 44%;
+                    background-size: 80%;
+                    margin: auto;
+                }
+                @media only screen and (max-width: 480px){
+                    padding-bottom: 55%;
+                    background-size: 100%;
                 }
             }
             .learning-help{
@@ -537,22 +556,27 @@ h2{
             }
             //CTA button - category-content
             .learn-more{
-                width: 26px;
-                height: 26px;
-                background-color: #7CCCFF;
-                border-radius: 50%;
-                background-image: url(images/next.png);
-                background-size: 20px;
-                background-repeat: no-repeat;
-                position: absolute;
-                right: 0;
-                bottom: -30px;
-                background-position: center;
-                &:hover{
-                    background-color: #3aa0df;
+                color: #212121;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                span{
+                    background-image: url(images/learnmore-arrow.svg);
+                    height: 20px;
+                    width: 20px;
+                    margin-left: 8px;
+                    background-repeat: no-repeat;
+                   &:hover{
+                       background-image: url(images/learnMore-hover.svg);
+                   }
+                   
+                }
+                @media only screen and (max-width: 768px){
+                    justify-content: center;
                 }
                 @media only screen and (max-width: 480px){
-                    font-size: 14px;
+                    font-size: 16px;
+                    padding-top: 14px;
                 }
             }
         }
@@ -560,7 +584,7 @@ h2{
     // section online-learning and learning methods
     .online-learning, .learning-methods{
         width: 100%;
-        max-width: 1400px;
+        max-width: 1440px;
         margin: auto;
         height: 600px;
         background-image: url(images/online-ucenje.svg);
@@ -582,7 +606,7 @@ h2{
             top: 50%;
             transform: translateY(-50%);
             position: absolute;
-            padding-left: 120px;
+            padding-left: 146px;
             @media only screen and (max-width: 768px){
                 padding: 50px 30px 30px 50px;
                 transform: none;
@@ -590,10 +614,14 @@ h2{
                 width: 80%;
             }
             @media only screen and (max-width: 480px){
-                padding: 50px 0px 0 25px;
+                padding-left: 30px;
+            }
+            @media only screen and (max-width: 360px){
+                padding-top: 30px!important;
             }
             h2{
                 font-size: 32px;
+                line-height: 42px;
                 @media only screen and (max-width: 768px){
                     font-size: 28px;
                 }
@@ -603,32 +631,45 @@ h2{
             }
             p{
                 font-size: 18px;
-                padding-top: 15px;
+                padding-top: 20px;
+                line-height: 26px;
                 color: white;
                 @media only screen and (max-width: 480px){
                     font-size: 15px;
+                    padding-top: 0;
+                }
+                @media only screen and (max-width: 360px){
+                    font-size: 14px;
                 }
             }
+            //Button - Saznajte više
             a{
-                background-color: #285875;
-                padding: 12px 32px;
+                background-color: #FFAE46;
+                width: 180px;
+                height: 56px;
                 color: white;
-                margin-top: 25px;
+                margin-top: 40px;
                 display: inline-block;
                 transition: 0.2s;
                 font-size: 18px;
-                border-radius: 5px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 @media only screen and (max-width: 768px){
-                    padding: 12px 16px;
                     font-size: 16px;
                     margin-top: 15px;
                 }
-                @media only screen and (max-width: 320px){
-                    padding: 8px 8px;
-                    font-size: 12px;
+                @media only screen and (max-width: 480px){
+                    width: 140px;
+                    height: 44px;
+                }
+                @media only screen and (max-width: 360px){
+                    width: 128px;
+                    font-size: 14px;
                 }
                 &:hover{
-                   padding: 16px 36px;
+                   height: 60px;
                 }    
             }
         }
@@ -671,21 +712,27 @@ h2{
             padding-bottom: 100%;
         }
         @media only screen and (max-width: 480px){
-            padding-bottom: 114%;
+            padding-bottom: 110%;
         }
-        @media only screen and (max-width: 320px){
-            padding-bottom: 135%;
+        @media only screen and (max-width: 360px){
+            padding-bottom: 130%;
         }
         .text-container{
             width: 50%;
-             @media only screen and (max-width: 768px){
+            @media only screen and (max-width: 768px){
                 width: 100%;
                 top: 0px;
                 padding-top: 0;
                 transform: none;
             }
-            h2, p{
-                color: #000;
+            @media only screen and (max-width: 360px){
+                padding-top: 0!important;
+            }
+            h2{
+                color: #212121;
+            }
+            p{
+                color: #272727;
             }
             a{
                 background-color: #2C6D9A;
@@ -714,7 +761,7 @@ footer{
     background-color: #3596d3;
     .footer-content{
         width: 100%;
-        max-width: 1400px;
+        max-width: 1440px;
         margin: auto;
         padding: 30px;
         display: grid;
@@ -765,10 +812,9 @@ footer{
                     padding-top: 20px;
                 }
                 a{
-                    padding-right: 30px;
                     font-size: 16px;
-                    padding: 8px 30px 5px 5px;
-                    display: block;
+                    padding: 10px 0 10px 30px;
+                    display: flex;
                     @media only screen and (max-width: 768px){
                         font-size: 16px;
                         padding: 8px 0;
@@ -781,20 +827,20 @@ footer{
                 .phone-number{
                     background-image: url(images/phone.svg);
                     background-repeat: no-repeat;
-                    background-size: 18px;
-                    background-position: right center;
+                    background-size: 16px;
+                    background-position: left center;
                 }
                 .address{
                     background-image: url(images/location.svg);
                     background-repeat: no-repeat;
-                    background-size: 18px;
-                    background-position: right center;
+                    background-size: 16px;
+                    background-position: left center;
                 }
                 .mail{
                     background-image: url(images/mail.svg);
                     background-repeat: no-repeat;
-                    background-size: 18px;
-                    background-position: right center;  
+                    background-size: 16px;
+                    background-position: left center;  
                 }
             }
             .social-media{
@@ -806,23 +852,17 @@ footer{
                     justify-content: center;
                     gap: 20px;
                 }
-                .facebook, .instagram{
-                    width: 35px;
-                    height: 35px;
-                    background-image: url(images/facebook-f.svg);
-                    background-size: 100%;
-                    opacity: 0.5;
-                    background-repeat: no-repeat;
+                .instagram, .facebook{
+                    width: 40px;
+                    height: 40px;
+                    background-image: url(images/instagram-social.svg);
+                    opacity: 0.8;
                     &:hover{
                         opacity: 1;
                     }
-                    @media only screen and (max-width: 480px){
-                        width: 30px;
-                        height: 30px;
-                    }
                 }
-                .instagram{
-                    background-image: url(images/instagram.svg);
+                .facebook{
+                    background-image: url(images/facebook-social.svg);
                 }
             }
         }  
@@ -849,19 +889,21 @@ footer{
 // pages  --- pomoc_u_učenju | instrukcije | savjetovanje_roditelja | specijalne_metode_rada | edukacija_za_pomocnike
 
 .categories{
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding: 120px 30px 60px 30px;
     @media only screen and (max-width: 768px){
         padding-top: 60px;
     }
+    @media only screen and (max-width: 480px){
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .category-container{
-        max-width: 1400px;
+        max-width: 1440px;
         width: 100%;
         margin: 0 auto;
         display: grid;
+        grid-gap: 120px;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 40px;
-        padding: 0 30px;
         @media only screen and (max-width: 900px){
             margin: 0;
             grid-gap: 40px;
@@ -869,7 +911,6 @@ footer{
         @media only screen and (max-width: 768px){
             grid-template-columns: 1fr;
             grid-gap: 0;
-            padding: 0 25px;
         }
         .category-text-container{
             @media only screen and (max-width: 900px){
@@ -881,7 +922,9 @@ footer{
                 font-size: 36px;
                 padding-bottom: 20px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                text-align: center;
+                @media only screen and (max-width: 768px){
+                    text-align: center;
+                }
                 @media only screen and (max-width: 480px){
                     font-size: 24px;
                 }
@@ -889,6 +932,7 @@ footer{
             p{
                 padding: 20px 0;
                 line-height: 1.5;
+                color: #272727;
                 @media only screen and (max-width: 480px){
                     font-size: 15px;
                 }
@@ -897,6 +941,7 @@ footer{
                 border-top: 1px solid rgba(0, 0, 0, 0.1);
                 padding-top: 20px;
                 line-height: 1.5;
+                color: #212121;
                 span{
                     font-weight: bold;
                 }
@@ -909,8 +954,7 @@ footer{
             }
         .tutoring, .learning-help, .consulting, .category-learning-methods, .education{
                 background-color: #7CCCFF;
-                height: 0px;
-                padding-bottom: 65%;
+                height: 340px;
                 margin-top: 62px;
                 background-image: url(images/instrukcije.svg);
                 background-repeat: no-repeat;
@@ -919,9 +963,13 @@ footer{
                 @media only screen and (max-width: 900px){
                     margin: 0 -30px 0 -30px; 
                 }
+                @media only screen and (max-width: 768px){
+                    
+                }
             }
             .learning-help{
                 background-image: url(images/pomoc-u-ucenju.svg);
+                background-position: left 12px bottom;
             }
             .consulting{
                 background-image: url(images/savjetovanje-roditelja-big.svg)
@@ -929,7 +977,6 @@ footer{
             .category-learning-methods{
                 background-image: url(images/gm-6.png);
                 background-size: auto 90%;
-                background-color: transparent;
             }
             .education{
                 background-image: url(images/edukacija-za-pomocnike-big.svg);
@@ -941,84 +988,110 @@ footer{
 //contact-page
 
 .contact{
+    @media only screen and (max-width: 480px){
+        padding-bottom: 170px!important;
+    }
+}
+.contact-page{
+    width: 80%;
+    height: 600px;
+    margin: auto;
     @media only screen and (max-width: 768px){
+        width: 100%;
         padding-top: 60px;
     }
-    h3{
-        color: #3596d3;
-        font-size: 32px;
-        padding-bottom: 20px;
-        text-align: center;
-        @media only screen and (max-width: 768px){
-            font-size: 24px;
-        }
-    }
     .contact-content{
-        .anja-contact{
-            width: 160px;
-            height: 160px;
-            background-image: url(images/anja-3.png);
-            background-size: 160px;
-            background-repeat: no-repeat;
-            border-radius: 50%;
-            margin: auto;
-            position: relative;
-            z-index: 2;
-            @media only screen and (max-width: 480px){
-                width: 140px;
-                height: 140px;
-                background-size: 140px;
+        position: absolute;
+        top: 30%;
+        right: 20px;
+        @media only screen and (max-width: 1000px){
+            left: 12px;
+        }
+        @media only screen and (max-width: 480px){
+            left: 25%;
+            top: 80%;
+        }
+        @media only screen and (max-width: 360px){
+            left: 0;
+        }
+        h3{
+            color: #3596d3;
+            font-size: 32px;
+            padding-bottom: 20px;
+            text-align: center;
+            @media only screen and (max-width: 768px){
+                font-size: 24px;
             }
         }
         .contact-info{
-            box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-            width: 340px;
+            background-color: #2086c5;
+            border-radius: 8px;
+            width: 260px;
             height: auto;
-            margin: auto;
-            padding-top: -20px;
-            padding-bottom: 30px;
+            padding: 30px;
             @media only screen and (max-width: 480px){
-                box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
                 width: 100%;
-                max-width: 320px;
-                margin: auto;
-                margin-top: -20px;
-                padding-bottom: 20px;
+                max-width: 220px;
+            }
+            @media only screen and (max-width: 480px){
+                width: 100%;
+                max-width: 220px;
+            }
+            @media only screen and (max-width: 360px){
+                width: 100%;
+                max-width: 200px;
+            }
+            h4{
+                color: white;
+                text-transform: uppercase;
             }
             p{
-                color:#555;
-                padding-top: 5px;
-                text-align: center;
-                &:first-child{
-                    padding-top: 44px;
-                }
+                color: white;
+                text-align: left;
                 @media only screen and (max-width: 480px){
                     font-size: 15px;
                 }
+                @media only screen and (max-width: 360px){
+                    font-size: 14px;
+                }
+                .opacity{
+                    opacity: 0.6;
+                    font-size: 14px;
+                    @media only screen and (max-width: 360px){
+                        font-size: 12px;
+                    }
+                }
             }
+            //contact-us button
             .contact-us{
-                padding: 12px 0;
-                width: 160px;
-                border-radius: 5px;
-                background: #316b90;
+                padding: 14px 0;
+                width: 148px;
+                border-radius: 8px;
+                background: #035f9a;
                 font-size: 16px;
                 color: white;
                 display: block;
                 text-align: center;
                 transition: 0.2s;
                 margin: auto;
-                margin-top: 30px;
+                margin-top: 10px;
                 @media only screen and (max-width: 480px){
-                    font-size: 15px;
-                    width: 146px;
-                    margin-top: 20px;
+                    font-size: 14px;
+                    width: 134px;
+                    margin-top: 0;
+                }
+                @media only screen and (max-width: 360px){
+                    width: 124px;
                 }
             }
+        } 
+    }
+    .map-container{
+        position: relative;
+        .mapouter{
+            position: relative;
         }
-    } 
-}
-.map-container{
-    margin-top: 55px;
+    }
 }
 
 //animated menu 
@@ -1085,10 +1158,10 @@ footer{
 //o_nama page
 
 .about-us{
-    @media only screen and (max-width: 900px){
-        padding-top: 60px!important;
-        grid-gap: 40px!important;
-    }
+    grid-gap: 60px!important;
+    @media only screen and (max-width: 768px){
+        padding-top: 60px;
+    } 
     @media only screen and (max-width: 480px){
         grid-gap: 30px!important;
     }  
@@ -1109,6 +1182,12 @@ footer{
             @media only screen and (max-width: 900px){
                 padding-bottom: 107%;
             }
+            @media only screen and (max-width: 768px){
+                padding-bottom: 134%;
+            }
+            @media only screen and (max-width: 480px){
+                padding-bottom: 80%;
+            }
             &.top{
                 background-image: url(images/anja-1.png);
                 @media only screen and (max-width: 480px){
@@ -1126,8 +1205,8 @@ footer{
                 background-image: url(images/anja-3.png);
                 margin-top: 60px;
                 @media only screen and (max-width: 480px){
-                    background-size: 80%;
-                    background-position: center bottom;
+                    background-size: 60%;
+                    background-position: top;
                     margin-top: 0!important;
                 } 
             }
@@ -1136,6 +1215,8 @@ footer{
     .about-us-text{
         p{
             line-height: 1.5;
+            text-align: center;
+            color: #272727;
             @media only screen and (max-width: 480px){
                 font-size: 15px;
             }
