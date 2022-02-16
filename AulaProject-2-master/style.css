@@ -44,6 +44,7 @@ body {
   font-family: roboto;
   overflow: hidden;
   overflow-y: scroll;
+  background-color: #f9f9f9;
 }
 
 a {
@@ -162,8 +163,8 @@ header nav .nav-container .nav-list li {
 
 header nav .nav-container .nav-list li a {
   color: white;
-  padding: 0 24px;
   width: 100%;
+  padding: 0 24px;
   height: inherit;
   border-bottom: 2px solid transparent;
   border-top: 2px solid transparent;
@@ -185,7 +186,7 @@ header nav .nav-container .nav-list li a {
 }
 
 header nav .nav-container .nav-list li:hover {
-  background: #da9708;
+  background: #E4AA0F;
 }
 
 @media only screen and (max-width: 768px) {
@@ -213,7 +214,7 @@ header nav .nav-container .arrow::after {
 
 header nav .nav-container ul.drop-down {
   position: absolute;
-  background-color: #da9708;
+  background-color: #E4AA0F;
   width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,7 +254,7 @@ header nav .nav-container ul.drop-down li {
 }
 
 header nav .nav-container ul.drop-down li:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   color: white;
 }
 
@@ -363,7 +364,6 @@ h1 {
   height: 100%;
   width: 100%;
   position: relative;
-  background-color: #f9f9f9;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -398,7 +398,6 @@ h1 {
 
 .content .main-content .main-content-container {
   height: 100%;
-  max-width: 1440px;
   width: 100%;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -410,6 +409,7 @@ h1 {
   background-position: right -30px center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  padding: 0 30px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -611,14 +611,13 @@ h2 {
 .section-holder {
   width: 100%;
   width: 100%;
+  max-width: 1440px;
   overflow: hidden;
   margin: auto;
 }
 
 .section-holder .category-grid {
   width: 100%;
-  max-width: 1440px;
-  margin: auto;
   margin-top: 60px;
   display: -ms-grid;
   display: grid;
@@ -640,12 +639,14 @@ h2 {
   .section-holder .category-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    padding: 0;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .section-holder .category-grid {
-    grid-gap: 40px;
+    grid-gap: 40px !important;
+    padding: 0 24px;
   }
 }
 
@@ -663,15 +664,13 @@ h2 {
 .section-holder .category-grid .category-content h2 {
   font-size: 18px;
   font-weight: 600;
-  padding-top: 28px;
+  margin-top: 24px;
   color: #212121;
-  line-height: 42px;
 }
 
 @media only screen and (max-width: 768px) {
   .section-holder .category-grid .category-content h2 {
     font-size: 28px;
-    padding-top: 24px;
   }
 }
 
@@ -684,14 +683,13 @@ h2 {
 
 .section-holder .category-grid .category-content p {
   color: #272727;
-  padding-top: 16px;
-  line-height: 22px;
+  margin-top: 16px;
 }
 
 @media only screen and (max-width: 768px) {
   .section-holder .category-grid .category-content p {
     width: 80%;
-    margin: auto;
+    margin: 16px auto 16px auto;
   }
 }
 
@@ -750,7 +748,7 @@ h2 {
 
 .section-holder .category-grid .category-content .learn-more {
   color: #212121;
-  font-size: 20px;
+  font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -760,15 +758,16 @@ h2 {
 }
 
 .section-holder .category-grid .category-content .learn-more span {
-  background-image: url(images/learnmore-arrow.svg);
-  height: 20px;
-  width: 20px;
+  background-image: url(images/learnMore-hover.svg);
+  height: 24px;
+  width: 24px;
+  background-position: center;
   margin-left: 8px;
   background-repeat: no-repeat;
 }
 
 .section-holder .category-grid .category-content .learn-more span:hover {
-  background-image: url(images/learnMore-hover.svg);
+  background-image: url(images/learnmore-arrow.svg);
 }
 
 @media only screen and (max-width: 768px) {
@@ -776,27 +775,35 @@ h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .section-holder .category-grid .category-content .learn-more {
     font-size: 16px;
-    padding-top: 14px;
+  }
+}
+
+.section-holder .service-holder {
+  padding: 0 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-holder .service-holder {
+    padding: 0;
   }
 }
 
 .section-holder .online-learning, .section-holder .learning-methods {
   width: 100%;
-  max-width: 1440px;
-  margin: auto;
   height: 600px;
   background-image: url(images/online-ucenje.svg);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -806,7 +813,7 @@ h2 {
     background-position: bottom right -30px;
     background-size: auto 100%;
     padding-bottom: 120%;
-    margin: 60px 0;
+    margin-top: 60px;
   }
 }
 
@@ -816,12 +823,12 @@ h2 {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   position: absolute;
-  padding-left: 146px;
+  padding-left: 116px;
 }
 
 @media only screen and (max-width: 768px) {
   .section-holder .online-learning .text-container, .section-holder .learning-methods .text-container {
-    padding: 50px 30px 30px 50px;
+    padding: 50px 80px;
     -webkit-transform: none;
             transform: none;
     top: 0;
@@ -831,7 +838,7 @@ h2 {
 
 @media only screen and (max-width: 480px) {
   .section-holder .online-learning .text-container, .section-holder .learning-methods .text-container {
-    padding-left: 30px;
+    padding-left: 24px;
   }
 }
 
@@ -868,7 +875,8 @@ h2 {
 @media only screen and (max-width: 480px) {
   .section-holder .online-learning .text-container p, .section-holder .learning-methods .text-container p {
     font-size: 15px;
-    padding-top: 0;
+    padding-top: 14px;
+    line-height: 20px;
   }
 }
 
@@ -902,8 +910,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
   .section-holder .online-learning .text-container a, .section-holder .learning-methods .text-container a {
-    font-size: 16px;
-    margin-top: 15px;
+    margin-top: 18px;
   }
 }
 
@@ -933,7 +940,7 @@ h2 {
     background-size: auto 100%;
     padding-bottom: 130%;
     margin-bottom: 60px;
-    margin-top: 60px;
+    margin-top: 40px;
     width: calc(100% + 60px);
   }
 }
@@ -1000,14 +1007,12 @@ h2 {
 @media only screen and (max-width: 768px) {
   .section-holder .learning-methods .text-container {
     width: 100%;
-    top: 0px;
-    padding-top: 0;
     -webkit-transform: none;
             transform: none;
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 480px) {
   .section-holder .learning-methods .text-container {
     padding-top: 0 !important;
   }
@@ -1059,8 +1064,14 @@ footer .footer-content {
         grid-template-rows: 1fr 1fr;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    padding: 25px;
+    padding: 30px;
     padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  footer .footer-content {
+    padding: 0 24px;
   }
 }
 
@@ -1151,7 +1162,7 @@ footer .footer-content .right-footer-content .contact-holder a {
 }
 
 footer .footer-content .right-footer-content .contact-holder .phone-number {
-  background-image: url(images/phone.svg);
+  background-image: url(images/phone-icon.svg);
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: left center;
@@ -1191,11 +1202,17 @@ footer .footer-content .right-footer-content .social-media {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  footer .footer-content .right-footer-content .social-media {
+    padding: 20px 0;
+  }
+}
+
 footer .footer-content .right-footer-content .social-media .instagram, footer .footer-content .right-footer-content .social-media .facebook {
   width: 40px;
   height: 40px;
   background-image: url(images/instagram-social.svg);
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 footer .footer-content .right-footer-content .social-media .instagram:hover, footer .footer-content .right-footer-content .social-media .facebook:hover {
@@ -1230,6 +1247,9 @@ footer .bottom-footer-content-2 {
 
 .categories {
   padding: 120px 30px 60px 30px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1246,7 +1266,6 @@ footer .bottom-footer-content-2 {
 }
 
 .categories .category-container {
-  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   display: -ms-grid;
@@ -1344,6 +1363,24 @@ footer .bottom-footer-content-2 {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .categories .category-container .picture-container .tutoring, .categories .category-container .picture-container .learning-help, .categories .category-container .picture-container .consulting, .categories .category-container .picture-container .category-learning-methods, .categories .category-container .picture-container .education {
+    padding-bottom: 60%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .categories .category-container .picture-container .tutoring, .categories .category-container .picture-container .learning-help, .categories .category-container .picture-container .consulting, .categories .category-container .picture-container .category-learning-methods, .categories .category-container .picture-container .education {
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .categories .category-container .picture-container .tutoring, .categories .category-container .picture-container .learning-help, .categories .category-container .picture-container .consulting, .categories .category-container .picture-container .category-learning-methods, .categories .category-container .picture-container .education {
+    height: 220px;
+  }
+}
+
 .categories .category-container .picture-container .learning-help {
   background-image: url(images/pomoc-u-ucenju.svg);
   background-position: left 12px bottom;
@@ -1362,9 +1399,15 @@ footer .bottom-footer-content-2 {
   background-image: url(images/edukacija-za-pomocnike-big.svg);
 }
 
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding: 120px 0 60px 0 !important;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .contact {
-    padding-bottom: 170px !important;
+    padding-bottom: 160px !important;
   }
 }
 
@@ -1372,13 +1415,6 @@ footer .bottom-footer-content-2 {
   width: 80%;
   height: 600px;
   margin: auto;
-}
-
-@media only screen and (max-width: 768px) {
-  .contact-page {
-    width: 100%;
-    padding-top: 60px;
-  }
 }
 
 .contact-page .contact-content {
@@ -1425,13 +1461,6 @@ footer .bottom-footer-content-2 {
   width: 260px;
   height: auto;
   padding: 30px;
-}
-
-@media only screen and (max-width: 480px) {
-  .contact-page .contact-content .contact-info {
-    width: 100%;
-    max-width: 220px;
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1570,7 +1599,7 @@ footer .bottom-footer-content-2 {
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
-    bottom: 5px;
+    bottom: 28px;
     right: 14px;
     border-radius: 50%;
     z-index: 10;
@@ -1704,7 +1733,7 @@ footer .bottom-footer-content-2 {
 }
 
 @media only screen and (max-width: 768px) {
-  .about-us .picture-container-video {
+  .about-us .container-video {
     width: 100%;
     margin: auto;
   }

@@ -38,6 +38,7 @@ body{
     font-family: roboto;
     overflow: hidden;
     overflow-y: scroll;
+    background-color: #f9f9f9;
 }
 a{
     text-decoration: none;
@@ -118,8 +119,8 @@ header{
                     }
                     a{
                         color: white;
-                        padding: 0 24px;
                         width: 100%;
+                        padding: 0 24px;
                         height: inherit;
                         border-bottom: 2px solid transparent;
                         border-top: 2px solid transparent;
@@ -133,7 +134,7 @@ header{
                         }
                     }
                     &:hover{
-                        background: #da9708;
+                        background: #E4AA0F;
                         @media only screen and (max-width: 768px){
                             background: transparent;
                         }
@@ -156,7 +157,7 @@ header{
             }
             ul.drop-down{
                 position: absolute;
-                background-color: #da9708;
+                background-color: #E4AA0F;
                 width: 300px;
                 display: flex;
                 top: 50px;
@@ -182,7 +183,7 @@ header{
                 li{
                     padding: 10px 0;
                     &:hover{
-                        background: rgba($color: #000000, $alpha: 0.2);
+                        background: rgba($color: #000000, $alpha: .1);
                         color: white;
                         a{
                             color: #fff;
@@ -303,7 +304,6 @@ h1{
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: #f9f9f9;
     transition: 0.5s;
     .content-holder{
         width: 100%;
@@ -326,7 +326,6 @@ h1{
         }
         .main-content-container{
             height: 100%;
-            max-width: 1440px;
             width: 100%;
             left: 50%;
             transform: translateX(-50%);
@@ -336,6 +335,7 @@ h1{
             background-repeat: no-repeat;
             background-position: right -30px center;
             transition: 0.3s;
+            padding: 0 30px;
             @media only screen and (max-width: 768px){
                 background-size: auto 60%;          
                 background-position: top 20px center;
@@ -466,12 +466,11 @@ h2{
 .section-holder{
     width: 100%;
     width: 100%;
+    max-width: 1440px;
     overflow: hidden;
     margin: auto;
     .category-grid{
         width: 100%;
-        max-width: 1440px;
-        margin: auto;
         margin-top: 60px;
         display: grid;
         grid-template-columns: repeat(4,1fr);
@@ -483,9 +482,11 @@ h2{
         }
         @media only screen and (max-width: 768px){
             grid-template-columns: 1fr;
+            padding: 0;
         }
         @media only screen and (max-width: 480px){
-            grid-gap: 40px;
+            grid-gap: 40px!important;
+            padding: 0 24px;
         }
         .category-content{
             width: 100%;
@@ -496,12 +497,10 @@ h2{
             h2{
                 font-size: 18px;
                 font-weight: 600;
-                padding-top: 28px;
+                margin-top: 24px;
                 color: #212121;
-                line-height: 42px;
                 @media only screen and (max-width: 768px){
                     font-size: 28px;
-                    padding-top: 24px;
                 }
                 @media only screen and (max-width: 480px){
                     font-size: 18px;
@@ -510,11 +509,10 @@ h2{
             }
             p{
                 color: #272727;
-                padding-top: 16px;
-                line-height: 22px;
+                margin-top: 16px;    
                 @media only screen and (max-width: 768px){
                     width: 80%;
-                    margin: auto;
+                    margin: 16px auto 16px auto;
                 }
                 @media only screen and (max-width: 480px){
                     font-size: 14px;
@@ -557,64 +555,69 @@ h2{
             //CTA button - category-content
             .learn-more{
                 color: #212121;
-                font-size: 20px;
+                font-size: 18px;
                 display: flex;
                 align-items: center;
                 span{
-                    background-image: url(images/learnmore-arrow.svg);
-                    height: 20px;
-                    width: 20px;
+                    background-image: url(images/learnMore-hover.svg);
+                    height: 24px;
+                    width: 24px;
+                    background-position: center;
                     margin-left: 8px;
                     background-repeat: no-repeat;
                    &:hover{
-                       background-image: url(images/learnMore-hover.svg);
+                       background-image: url(images/learnmore-arrow.svg);
                    }
                    
                 }
                 @media only screen and (max-width: 768px){
                     justify-content: center;
+                    font-size: 18px;
                 }
                 @media only screen and (max-width: 480px){
                     font-size: 16px;
-                    padding-top: 14px;
                 }
             }
+        }
+    }
+    .service-holder{
+        padding: 0 30px;
+        @media only screen and (max-width: 768px){
+            padding: 0;
         }
     }
     // section online-learning and learning methods
     .online-learning, .learning-methods{
         width: 100%;
-        max-width: 1440px;
-        margin: auto;
         height: 600px;
         background-image: url(images/online-ucenje.svg);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
-        margin-top: 100px;
+        margin-top: 60px;
         @media only screen and (max-width: 768px){
             height: 0;
             float: left;
             background-position: bottom right -30px;
             background-size: auto 100%;
             padding-bottom: 120%;
-            margin: 60px 0;
+            margin-top: 60px;
         }
         .text-container{
             width: 60%;
             top: 50%;
             transform: translateY(-50%);
             position: absolute;
-            padding-left: 146px;
+            padding-left: 116px;
             @media only screen and (max-width: 768px){
-                padding: 50px 30px 30px 50px;
+                padding: 50px 80px;
                 transform: none;
                 top: 0;
                 width: 80%;
             }
             @media only screen and (max-width: 480px){
-                padding-left: 30px;
+                padding-left: 24px;
             }
             @media only screen and (max-width: 360px){
                 padding-top: 30px!important;
@@ -636,7 +639,8 @@ h2{
                 color: white;
                 @media only screen and (max-width: 480px){
                     font-size: 15px;
-                    padding-top: 0;
+                    padding-top: 14px;
+                    line-height: 20px;
                 }
                 @media only screen and (max-width: 360px){
                     font-size: 14px;
@@ -657,8 +661,7 @@ h2{
                 align-items: center;
                 justify-content: center;
                 @media only screen and (max-width: 768px){
-                    font-size: 16px;
-                    margin-top: 15px;
+                    margin-top: 18px;
                 }
                 @media only screen and (max-width: 480px){
                     width: 140px;
@@ -682,7 +685,7 @@ h2{
             background-size: auto 100%;
             padding-bottom: 130%;
             margin-bottom: 60px;
-            margin-top: 60px;
+            margin-top: 40px;
             width: calc(100% + 60px);
         }
         @media only screen and (max-width: 320px){
@@ -721,11 +724,9 @@ h2{
             width: 50%;
             @media only screen and (max-width: 768px){
                 width: 100%;
-                top: 0px;
-                padding-top: 0;
                 transform: none;
             }
-            @media only screen and (max-width: 360px){
+            @media only screen and (max-width: 480px){
                 padding-top: 0!important;
             }
             h2{
@@ -770,8 +771,11 @@ footer{
         @media only screen and (max-width: 768px){
             grid-template-rows: 1fr 1fr;  
             grid-template-columns: 1fr;
-            padding: 25px;
+            padding: 30px;
             padding-top: 0;
+        }
+        @media only screen and (max-width: 480px){
+            padding: 0 24px;
         }
         .left-footer-content{
             h3{
@@ -825,7 +829,7 @@ footer{
                     }
                 }
                 .phone-number{
-                    background-image: url(images/phone.svg);
+                    background-image: url(images/phone-icon.svg);
                     background-repeat: no-repeat;
                     background-size: 16px;
                     background-position: left center;
@@ -852,11 +856,14 @@ footer{
                     justify-content: center;
                     gap: 20px;
                 }
+                @media only screen and (max-width: 480px){
+                    padding: 20px 0;
+                }
                 .instagram, .facebook{
                     width: 40px;
                     height: 40px;
                     background-image: url(images/instagram-social.svg);
-                    opacity: 0.8;
+                    opacity: 0.6;
                     &:hover{
                         opacity: 1;
                     }
@@ -890,6 +897,9 @@ footer{
 
 .categories{
     padding: 120px 30px 60px 30px;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
     @media only screen and (max-width: 768px){
         padding-top: 60px;
     }
@@ -898,7 +908,6 @@ footer{
         padding-right: 20px;
     }
     .category-container{
-        max-width: 1440px;
         width: 100%;
         margin: 0 auto;
         display: grid;
@@ -964,7 +973,13 @@ footer{
                     margin: 0 -30px 0 -30px; 
                 }
                 @media only screen and (max-width: 768px){
-                    
+                    padding-bottom: 60%;
+                }
+                @media only screen and (max-width: 480px){
+                    height: 280px;
+                }
+                @media only screen and (max-width: 360px){
+                    height: 220px;
                 }
             }
             .learning-help{
@@ -988,18 +1003,17 @@ footer{
 //contact-page
 
 .contact{
+    @media only screen and (max-width: 768px){
+        padding: 120px 0 60px 0!important;
+    }
     @media only screen and (max-width: 480px){
-        padding-bottom: 170px!important;
+        padding-bottom: 160px!important;
     }
 }
 .contact-page{
     width: 80%;
     height: 600px;
     margin: auto;
-    @media only screen and (max-width: 768px){
-        width: 100%;
-        padding-top: 60px;
-    }
     .contact-content{
         position: absolute;
         top: 30%;
@@ -1029,10 +1043,6 @@ footer{
             width: 260px;
             height: auto;
             padding: 30px;
-            @media only screen and (max-width: 480px){
-                width: 100%;
-                max-width: 220px;
-            }
             @media only screen and (max-width: 480px){
                 width: 100%;
                 max-width: 220px;
@@ -1086,6 +1096,7 @@ footer{
             }
         } 
     }
+    // google maps
     .map-container{
         position: relative;
         .mapouter{
@@ -1136,7 +1147,7 @@ footer{
     stroke-width: 8;
 }
 
-// call button
+// call button - for mobile version
 
 .call-button{
     @media only screen and (max-width: 480px){
@@ -1148,7 +1159,7 @@ footer{
         background-size: 25px;
         background-repeat: no-repeat;
         background-position: center;
-        bottom: 5px;
+        bottom: 28px;
         right: 14px;
         border-radius: 50%;
         z-index: 10;
@@ -1234,7 +1245,8 @@ footer{
             }
         }
     }
-    .picture-container-video{
+    //about-us video
+    .container-video{
         @media only screen and (max-width: 768px){
             width: 100%;
             margin: auto;
