@@ -129,7 +129,7 @@ header nav .nav-container .nav-list {
 
 @media only screen and (max-width: 768px) {
   header nav .nav-container .nav-list {
-    width: 85%;
+    width: 100%;
     overflow: hidden;
     background-color: #52B3F0;
     padding: 30px 0;
