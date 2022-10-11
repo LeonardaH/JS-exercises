@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="input-wrapper">
+    <input type="text" id="name" placeholder="Your name">
+      <p>Please select level:</p>
+        <input type="radio" id="hard" name="level" value="hard">
+        <label for="hard">Hard</label><br>
+        <input type="radio" id="normal" name="level" value="normal" checked>
+        <label for="normal">Normal</label><br>
+  </div>
+
+      <button type="button" class="btn">Start the game</button>
+      <div class="container" hidden>
+        <div class="placeholder">
+          <p class="word"></p>
+        </div>
+        <div class="timeCounter">
+          <p>Counter</p>
+          <span class="time">60</span>
+        </div>
+        <div class="score">
+          <p>score</p>
+          <span class="scoreSpan">0</span>
+        </div>
+      </div>
+      <div class="highscore">
+        <span class="hScore">0</span>
+      </div>
+  <script src="script.js"></script>
+</body>
+</html>

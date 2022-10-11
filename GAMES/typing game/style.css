@@ -1,0 +1,55 @@
+.correct{
+    color: green;
+}
+
+.wrong{
+    color: red;
+}
+
+.word{
+    font-size: 32px;
+    color: antiquewhite;
+}
+
+.container{
+    background-color: slategrey;
+    padding: 10px;
+    margin-top: 20px;
+    width: 400px;
+    border-radius: 4px;
+    margin: 20px auto;
+}
+
+.btn{
+    background-color: skyblue;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.timeCounter{
+    color: blue;;
+}
+
+.time{
+    font-size: 38px;
+}
+
+.input-wrapper{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#name{
+    height: 32px;
+    padding-left: 8px;
+    background-color: rgb(174, 201, 224);
+    border: none;
+}
+
+.highscore{
+    font-size: 24px;
+}
